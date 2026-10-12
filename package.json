@@ -1,0 +1,17 @@
+{
+  "name": "crossy-road-jev",
+  "version": "1.0.0",
+  "description": "A Crossy Road clone in the browser: play it yourself or watch Jev (TypeSafe) play it in real time.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/server.js",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Crossy Road · Jev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/web/style.css">
+  <script type="importmap">{ "imports": { "three": "/vendor/three/three.module.js", "three/addons/": "/vendor/three-addons/" } }</script>
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <div id="score-box"><div id="score">0</div><div id="top">TOP 0</div></div>
+    <div id="coins-box"><span id="coins">0</span><span class="coin-icon"></span></div>
+    <div id="badge" class="hidden"></div>
+  </div>
+
+  <div id="menu" class="overlay">
+    <div class="panel">
+      <h1 class="logo"><span>CROSSY</span><span>ROAD</span></h1>
+      <p class="sub">jev edition</p>
+      <button id="play-btn" class="big">PLAY</button>
+      <div class="row">
+        <button id="watch-btn">Watch Jev</button>
+      </div>
+      <p class="keys">Arrows / WASD to hop (released key = hop) · M mute · Esc pause</p>
+      <p id="menu-error" class="error hidden"></p>
+    </div>
+  </div>
+
+  <div id="pause" class="overlay hidden"><div class="panel"><h2>PAUSED</h2><p>Esc to resume</p></div></div>
+
+  <div id="gameover" class="overlay hidden">
+    <div class="panel">
+      <h2 id="go-title">GAME OVER</h2>
+      <p id="go-detail"></p>
+      <button id="again-btn" class="big">PLAY AGAIN</button>
+      <div class="row">
+        <button id="menu-btn">Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/web/main.js"></script>
+</body>
+</html>
